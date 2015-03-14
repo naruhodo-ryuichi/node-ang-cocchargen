@@ -1,0 +1,16 @@
+block nav
+    tabset
+        tab(heading="Indice", disabled="false")
+            div(ng-include="")
+        tab(heading="Características", disabled="false")
+            div(ng-include="'/partials/caracteristicas'")
+        tab(heading="Ocupación", disabled="formficha.$invalid", active="tabs.ocupacion")
+            div(ng-include="'/partials/ocupacion'")
+        tab(heading="Habilidades", disabled="formficha.$invalid", active="tabs.habilidades")
+            div(ng-include="'/partials/habilidades'")
+        tab(heading="Datos Personales", disabled="true")
+            div(ng-include="'/partials/datos'")
+        tab(heading="Guardar", disabled="true")
+            div(ng-include="'/partials/guardar'")
+        tab(heading="Cargar")
+            div(ng-include="'/partials/cargar'")

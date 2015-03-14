@@ -1,0 +1,19 @@
+{
+  "name": "cocchargen",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.3.5",
+    "orm": "2.1.22",
+    "sqlite3": "3.0.5",
+    "jade": "1.9.2"
+  },
+  "description": "An incomplete test of server and client side web technologies",
+  "main": "app.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "AfferoGPL"
+}

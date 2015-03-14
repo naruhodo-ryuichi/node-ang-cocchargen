@@ -1,0 +1,79 @@
+//-
+    div(class="container form-inline", style="text-align: center;", ng-form="formcar")
+      div(class="btn btn-droppable", ng-repeat="tirada in tiradas track by $index", ng-model='tiradas', jqyoui-droppable="{index: {{$index}}}")
+        div(class="btn btn-info btn-draggable", data-drag="true", data-jqyoui-options="{revert: 'invalid'}", ng-model="tiradas", jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}")
+          {{tirada}}
+      div(class="btn", ng-click="tira()") Rehacer Tiradas
+      div(class="btn", ng-click="tirarand()") Tiradas Aleatorias
+
+table(width="100%", class="margin skills border", cellpadding="0", cellspacing="0")
+  tbody
+    tr
+      th(width="1%") FUE
+      td(width="24%")
+        input(ng-model='ficha.FUE', name='FUE', ng-change="actualizaFUE()", type="number",min="3",max="18")
+      th(width="1%") DES
+      td(width="24%")
+        input(ng-model='ficha.DES', name='DES',type="number",min="3",max="18")
+      th(width="1%") INT
+      td(width="24%")
+        input(ng-model='ficha.INT', name='INT', ng-change="actualizaINT()", jqyoui-droppable="{onDrop:'actualizaINT'}",type="number",min="8",max="18")
+      th(width="1%") Idea
+      td(width="24%")
+        input(ng-model='ficha.idea', name='idea', readonly)
+    tr
+      th(width="1%") CON
+      td(width="24%")
+        input(ng-model='ficha.CON', name='CON', ng-change="actualizaCON()", jqyoui-droppable="{onDrop:'actualizaCON'}",type="number",min="3",max="18")
+      th(width="1%") APA
+      td(width="24%")
+        input(ng-model='ficha.APA', name='APA', type="number",min="3",max="18")
+      th(width="1%") POD
+      td(width="24%")
+        input(ng-model='ficha.POD', name='POD', ng-change="actualizaPOD()", jqyoui-droppable="{onDrop:'actualizaPOD'}",type="number",min="3",max="18")
+      th(width="1%") Suerte
+      td(width="24%")
+        input(ng-model='ficha.suerte', name='suerte', readonly)
+    tr
+      th(width="1%") TAM
+      td(width="24%")
+        input(ng-model='ficha.TAM', name='TAM', ng-change="actualizaTAM()", jqyoui-droppable="{onDrop:'actualizaTAM'}",type="number",min="8",max="18")
+      th(width="1%") COR
+      td(width="24%")
+        input(ng-model='ficha.COR', name='COR')
+      th(width="1%") EDU
+      td(width="24%")
+        input(ng-model='ficha.EDU', name='EDU', ng-change="actualizaEDU()", jqyoui-droppable="{onDrop:'actualizaEDU'}",type="number",min="3",max="18")
+      th(width="1%") Conocimientos
+      td(width="24%")
+        input(ng-model='ficha.conocimientos', name='conocimientos', readonly)
+    tr
+      td(colspan="3", class="center") 99-Mitos de Cthulhu
+      td
+        input(ng-model='ficha.cormax', name="cormax", readonly)
+      td(colspan="3", class="center") Bonif. al daño
+      td
+        input(ng-model='ficha.bd', name="bd", readonly)
+    tr
+      td(colspan="3", class="center") Puntos de Vida
+      td
+        input(ng-model='ficha.pv', name="pv", readonly)
+      td(colspan="3", class="center") Puntos de Magia
+      td
+        input(ng-model='ficha.pm', name="pm", readonly)
+    tr
+      td(colspan="3", class="center") Puntos de Habilidad
+      td
+        input(ng-model='ficha.ph', name="ph", readonly)
+      td(colspan="3", class="center") Puntos de Interes
+      td
+        input(ng-model='ficha.pi', name="pi", readonly)
+    tr
+      td(colspan="3", class="center") Edad Mínima
+      td
+        input(ng-model='ficha.edad', name="edad", readonly)
+      td(colspan="3", class="center") Estudios Extra
+      td
+        input(ng-model='ficha.estudios', name="estudios", type="checkbox")
+div
+  button(ng-click="tabs.ocupacion=true", ng-disabled="formficha.$invalid || isUnchanged(ficha)") Elegir Ocupación

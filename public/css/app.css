@@ -1,0 +1,67 @@
+BODY, TH, TD, FORM, TEXTAREA {
+    background-color: white;
+    color: black;
+    font-family: Times, serif;
+    font-size: 12pt;
+}
+
+BODY {
+    background: #aba899 top left;
+}
+
+#sheet {
+    background-color: white !important;
+}
+
+TR {
+    vertical-align: bottom;
+}
+
+TH {
+    text-align: left;
+}
+
+TR.vals TH {
+    font-weight: normal;
+    text-align: center;
+}
+
+TABLE.skills TD {
+    padding-right: 0.5em;
+}
+
+TABLE.skills TH {
+    padding-left: 0.5em;
+}
+
+TABLE.skills INPUT {
+    width: 95%;
+}
+
+UL, LI {
+    margin-left: 0.5em;
+    padding-left: 0px;
+}
+
+input{
+    border: none;
+    border-bottom: 1px solid black;
+    color: blue;
+    font-family: cursive, sans-serif;
+    font-size: 12pt;
+    width: 100%;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    outline:none !important;
+    -webkit-appearance:none !important;
+    border: none;
+    border-bottom: 1px solid black;
+    color: blue;
+    font-family: cursive, sans-serif;
+    font-size: 12pt;
+    width: 100%;
+}
