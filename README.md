@@ -4,17 +4,28 @@
 An incomplete test of server and client side web technologies
 
 Backend:
+
     - nodejs
+    
     - express
+    
     - sqlite-ORM
+    
     - async partial views
+    
 
 Frontend:
+
     - angularjs
+    
     - Jade Templating
+    
     - Bootstrap CSS
+    
     - Multipage form
+    
     - Dynamic tabset render
+    
 
 ##Requirements
 nodejs
